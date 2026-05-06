@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <SiteShell>
-      <section className="mx-auto flex min-h-svh w-full max-w-5xl items-center justify-center px-4 sm:px-6">
+      <section data-page-enter className="mx-auto flex min-h-svh w-full max-w-5xl items-center justify-center px-4 sm:px-6">
         <div className="w-full max-w-3xl p-8 text-center sm:p-10">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-400">About</p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-6xl">About Us</h1>
@@ -19,8 +19,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-5xl px-4 pb-8 sm:px-6">
-        <div className="rounded-3xl bg-slate-900 p-6 text-white sm:p-8">
+      <section data-reveal className="mx-auto w-full max-w-5xl px-4 pb-8 sm:px-6">
+        <div data-interactive-card className="rounded-3xl bg-slate-900 p-6 text-white sm:p-8">
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-300">How we work</p>
           <div className="mt-5 grid gap-4 sm:grid-cols-3">
             <div>
@@ -39,16 +39,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-5xl px-4 pb-16 sm:px-6">
-        <div className="grid gap-5 md:grid-cols-2 md:gap-6">
-          <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+      <section data-reveal className="mx-auto w-full max-w-5xl px-4 pb-16 sm:px-6">
+        <div data-stagger className="grid gap-5 md:grid-cols-2 md:gap-6">
+          <article data-stagger-item data-interactive-card className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Our mission</h2>
             <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
               Build a trustworthy team that cares for every home while creating real growth
               opportunities and a supportive workplace for cleaners.
             </p>
           </article>
-          <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+          <article data-stagger-item data-interactive-card className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Our commitment</h2>
             <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
               Deliver punctual, detail-focused service with eco-friendly options, clear

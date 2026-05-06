@@ -33,7 +33,7 @@ const faqItems = [
 export default function FaqPage() {
   return (
     <SiteShell>
-      <section className="mx-auto flex min-h-svh w-full max-w-4xl items-center justify-center px-4 sm:px-6">
+      <section data-page-enter className="mx-auto flex min-h-svh w-full max-w-4xl items-center justify-center px-4 sm:px-6">
         <div className="w-full max-w-3xl p-8 text-center sm:p-10">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-400">FAQ</p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-6xl">FAQ</h1>
@@ -44,13 +44,17 @@ export default function FaqPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-4xl px-4 pb-14 sm:px-6 sm:pb-16">
-        <div className="mt-8 rounded-3xl border border-slate-200 bg-slate-900 p-5 text-white dark:border-slate-700 sm:p-6">
+      <section data-reveal className="mx-auto w-full max-w-4xl px-4 pb-14 sm:px-6 sm:pb-16">
+        <div data-interactive-card className="mt-8 rounded-3xl border border-slate-200 bg-slate-900 p-5 text-white dark:border-slate-700 sm:p-6">
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-300">Quick answer</p>
           <p className="mt-2 text-lg font-semibold">Yes, we offer eco-friendly options on request.</p>
         </div>
 
-        <Accordion className="mt-6 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900 sm:p-6" defaultValue={["item-0"]}>
+        <Accordion
+          data-reveal
+          className="mt-6 rounded-2xl border border-slate-200 bg-white p-4 dark:border-slate-800 dark:bg-slate-900 sm:p-6"
+          defaultValue={["item-0"]}
+        >
           {faqItems.map((item, index) => (
             <AccordionItem key={item.q} value={`item-${index}`}>
               <AccordionTrigger className="text-lg font-semibold text-slate-900 hover:no-underline dark:text-slate-100">

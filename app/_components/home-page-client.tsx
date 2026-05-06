@@ -14,12 +14,36 @@ import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 
 const serviceCards = [
-  "Apartment Cleaning",
-  "Deep Cleaning",
-  "Move In / Move Out",
-  "Office Cleaning",
-  "Airbnb Turnover",
-  "Post Construction",
+  {
+    title: "Apartment Cleaning",
+    description: "Tailored to your home and schedule.",
+    illustration: "/service-illustrations/apartment-cleaning.svg",
+  },
+  {
+    title: "Deep Cleaning",
+    description: "Tailored to your home and schedule.",
+    illustration: "/service-illustrations/deep-cleaning.svg",
+  },
+  {
+    title: "Move In / Move Out",
+    description: "Tailored to your home and schedule.",
+    illustration: "/service-illustrations/move-cleaning.svg",
+  },
+  {
+    title: "Office Cleaning",
+    description: "Tailored to your home and schedule.",
+    illustration: "/service-illustrations/office-cleaning.svg",
+  },
+  {
+    title: "Airbnb Turnover",
+    description: "Tailored to your home and schedule.",
+    illustration: "/service-illustrations/airbnb-turnover.svg",
+  },
+  {
+    title: "Post Construction",
+    description: "Tailored to your home and schedule.",
+    illustration: "/service-illustrations/post-construction.svg",
+  },
 ];
 
 const processSteps = [
@@ -156,7 +180,7 @@ export function HomePageClient() {
             </p>
             <div className="mt-8 flex flex-wrap gap-2.5 sm:gap-3">
               <Link
-                href="/contact"
+                href="/booking"
                 className={cn(
                   buttonVariants({ size: "lg" }),
                   "cta-gsap group rounded-full bg-emerald-400 px-5 text-slate-950 hover:bg-emerald-300 sm:px-6",
@@ -179,17 +203,17 @@ export function HomePageClient() {
             </div>
           </div>
           <Image
-            src="/reference-home.png"
-            alt="Sparkly Maid NYC homepage inspiration"
-            width={1268}
-            height={768}
-            className="animate-in rounded-[1.5rem] border border-white/10 shadow-2xl sm:rounded-[2rem]"
+            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&h=900&q=80"
+            alt="Professional cleaner disinfecting a modern apartment"
+            width={1600}
+            height={900}
+            className="animate-in aspect-video rounded-[1.5rem] border border-white/10 object-cover shadow-2xl sm:rounded-[2rem]"
             priority
           />
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
+      <section data-reveal className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
         <div className="animate-in">
           <SectionTitle
             title="Cleaning Services"
@@ -198,24 +222,33 @@ export function HomePageClient() {
             ctaHref="/services"
           />
         </div>
-        <div className="grid gap-4 md:grid-cols-12">
+        <div data-stagger className="grid gap-4 md:grid-cols-12">
           {serviceCards.map((service) => (
             <Card
-              key={service}
+              data-stagger-item
+              data-interactive-card
+              key={service.title}
               className="animate-in border-slate-200/80 bg-white/95 p-0 dark:border-slate-800 dark:bg-slate-900 md:col-span-4 md:even:-translate-y-1 md:odd:translate-y-1"
             >
               <CardHeader className="px-5 pt-5 pb-2">
-                <CardTitle className="text-xl font-semibold text-slate-900 dark:text-slate-100">{service}</CardTitle>
+                <Image
+                  src={service.illustration}
+                  alt={service.title}
+                  width={640}
+                  height={360}
+                  className="mb-4 aspect-video w-full rounded-xl border border-slate-200/70 object-cover dark:border-slate-700"
+                />
+                <CardTitle className="text-xl font-semibold text-slate-900 dark:text-slate-100">{service.title}</CardTitle>
               </CardHeader>
               <CardContent className="px-5 pb-5 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                Tailored to your home and schedule.
+                {service.description}
               </CardContent>
             </Card>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 sm:pb-16">
+      <section data-reveal className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 sm:pb-16">
         <SectionTitle
           title="Deep Cleaning"
           subtitle="A stronger reset for high-impact areas."
@@ -244,7 +277,7 @@ export function HomePageClient() {
               ))}
             </ul>
             <Link
-              href="/contact"
+              href="/booking"
               className={cn(
                 buttonVariants(),
                 "cta-gsap mt-6 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 text-white hover:bg-emerald-500",
@@ -259,8 +292,8 @@ export function HomePageClient() {
               src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=1600&h=1000&q=80"
               alt="Professional deep cleaning in a modern home"
               width={1600}
-              height={1000}
-              className="rounded-2xl object-cover shadow-xl"
+              height={900}
+              className="aspect-video rounded-2xl object-cover shadow-xl"
             />
             <div className="absolute -bottom-3 -left-3 rounded-xl bg-slate-950 px-3 py-2 text-xs font-semibold text-white sm:-bottom-4 sm:-left-4 sm:text-sm">
               Most requested add-on in NYC
@@ -269,7 +302,7 @@ export function HomePageClient() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
+      <section data-reveal className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
         <SectionTitle
           title="How It Works"
           subtitle="Simple 3-step process from booking to clean home."
@@ -293,7 +326,7 @@ export function HomePageClient() {
         </div>
       </section>
 
-      <section className="mx-auto grid w-full max-w-6xl gap-6 px-4 pb-14 sm:px-6 sm:pb-16 md:grid-cols-2 md:items-center md:gap-8">
+      <section data-reveal className="mx-auto grid w-full max-w-6xl gap-6 px-4 pb-14 sm:px-6 sm:pb-16 md:grid-cols-2 md:items-center md:gap-8">
         <div className="md:col-span-2">
           <SectionTitle
             title="Why Sparkly Maid"
@@ -302,7 +335,7 @@ export function HomePageClient() {
             ctaHref="/about"
           />
         </div>
-        <Card className="animate-in border-slate-200 bg-white p-0 shadow-sm dark:border-slate-800 dark:bg-slate-900 md:rotate-[-0.4deg]">
+        <Card data-interactive-card className="animate-in border-slate-200 bg-white p-0 shadow-sm dark:border-slate-800 dark:bg-slate-900 md:rotate-[-0.4deg]">
           <CardHeader className="px-6 pt-6 pb-2">
             <CardTitle className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-3xl">
               Why clients choose us
@@ -317,7 +350,7 @@ export function HomePageClient() {
             </ul>
           </CardContent>
         </Card>
-        <Card className="animate-in border-slate-200 bg-slate-100 p-0 dark:border-slate-800 dark:bg-slate-800 md:rotate-[0.4deg]">
+        <Card data-interactive-card className="animate-in border-slate-200 bg-slate-100 p-0 dark:border-slate-800 dark:bg-slate-800 md:rotate-[0.4deg]">
           <CardHeader className="px-6 pt-6 pb-2">
             <CardTitle className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
               48-hour satisfaction guarantee
@@ -340,7 +373,7 @@ export function HomePageClient() {
         </Card>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 sm:pb-16">
+      <section data-reveal className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 sm:pb-16">
         <div className="animate-in">
           <SectionTitle
             title="Gallery"
@@ -349,14 +382,14 @@ export function HomePageClient() {
             ctaHref="/blog"
           />
         </div>
-        <div className="grid gap-5">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <Card className="animate-in overflow-hidden border-slate-200 bg-white p-0 dark:border-slate-800 dark:bg-slate-900">
             <Image
               src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1900&h=600&q=80"
               alt="Professional cleaner working in modern apartment"
               width={1900}
-              height={600}
-              className="aspect-19/6 w-full object-cover"
+              height={1069}
+              className="aspect-video w-full object-cover"
             />
             <CardContent className="px-5 py-4 text-sm text-slate-600 dark:text-slate-400">Apartment deep cleaning</CardContent>
           </Card>
@@ -365,8 +398,8 @@ export function HomePageClient() {
               src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1900&h=600&q=80"
               alt="Cleaning tools arranged for home cleaning service"
               width={1900}
-              height={600}
-              className="aspect-19/6 w-full object-cover"
+              height={1069}
+              className="aspect-video w-full object-cover"
             />
             <CardContent className="px-5 py-4 text-sm text-slate-600 dark:text-slate-400">Tools and detail work</CardContent>
           </Card>
@@ -375,15 +408,15 @@ export function HomePageClient() {
               src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=1900&h=600&q=80"
               alt="Minimal living room after professional cleaning"
               width={1900}
-              height={600}
-              className="aspect-19/6 w-full object-cover"
+              height={1069}
+              className="aspect-video w-full object-cover"
             />
             <CardContent className="px-5 py-4 text-sm text-slate-600 dark:text-slate-400">Fresh and minimal results</CardContent>
           </Card>
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 sm:pb-16">
+      <section data-reveal className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 sm:pb-16">
         <div className="animate-in">
           <SectionTitle
             title="What Clients Say"
@@ -392,9 +425,11 @@ export function HomePageClient() {
             ctaHref="/faq"
           />
         </div>
-        <div className="mt-7 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <div data-stagger className="mt-7 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {testimonials.map((item) => (
             <Card
+              data-stagger-item
+              data-interactive-card
               key={item.author}
               className="animate-in border-slate-200 bg-white p-0 shadow-sm dark:border-slate-800 dark:bg-slate-900 md:odd:rotate-[-0.6deg] md:even:rotate-[0.6deg]"
             >
@@ -414,19 +449,19 @@ export function HomePageClient() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20">
+      <section data-reveal className="mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20">
         <SectionTitle
           title="Quick Inquiry"
           subtitle="Send your details and we will get back to you fast."
-          ctaLabel="Contact Page"
-          ctaHref="/contact"
+            ctaLabel="Booking Page"
+            ctaHref="/booking"
         />
         <div className="animate-in grid gap-6 rounded-[2rem] border border-slate-800 bg-slate-900 p-5 text-white sm:p-8 md:grid-cols-[0.9fr_1.1fr] md:gap-8 md:p-10">
           <div>
             <p className="text-sm uppercase tracking-[0.18em] text-cyan-200">Quick Inquiry</p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">Tell us about your space</h2>
             <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-300">
-              Frontend demo form. Backend comes next.
+              Share your details and we will contact you shortly.
             </p>
           </div>
           <form className="space-y-4 rounded-2xl bg-white p-5 text-slate-900 sm:p-6" onSubmit={(e) => e.preventDefault()}>
@@ -446,8 +481,23 @@ export function HomePageClient() {
               <Label htmlFor="message">Message</Label>
               <Textarea id="message" name="message" placeholder="Apartment size, preferred date, special requests..." />
             </div>
+                <label className="flex items-start gap-3 text-sm leading-relaxed text-slate-600">
+                  <input
+                    type="checkbox"
+                    name="privacyConsentQuick"
+                    required
+                    className="mt-0.5 size-4 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
+                  />
+                  <span>
+                    I agree to personal data processing for this inquiry and I have read the{" "}
+                    <Link href="/privacy-policy" className="font-medium text-emerald-700 underline underline-offset-4">
+                      Privacy Policy
+                    </Link>
+                    .
+                  </span>
+                </label>
             <Button type="submit" className="cta-gsap w-full rounded-full bg-emerald-600 text-white hover:bg-emerald-500">
-              Send Request (Demo)
+              Send Request
             </Button>
           </form>
         </div>

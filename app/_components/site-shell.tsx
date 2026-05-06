@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { SiteInteractions } from "./site-interactions";
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -10,11 +11,13 @@ const navItems = [
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
+  { href: "/booking", label: "Booking" },
   { href: "/contact", label: "Contact" },
 ];
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -30,7 +33,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/90">
+      <header
+        data-page-enter
+        className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/90"
+      >
         <div className="mx-auto hidden w-full max-w-6xl items-center justify-between px-4 py-2 text-xs text-slate-600 dark:text-slate-400 sm:flex sm:px-6">
           <p>NYC trusted house cleaning</p>
           <p>Call us: (646) 585-3515</p>
@@ -51,7 +57,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             ))}
           </nav>
           <Link
-            href="/contact"
+            href="/booking"
             className="group hidden items-center gap-1.5 rounded-full bg-emerald-600 px-3 py-2 text-xs font-medium text-white transition hover:bg-emerald-500 sm:px-4 sm:text-sm md:inline-flex"
           >
             Book Now
@@ -102,7 +108,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               Call (646) 585-3515
             </a>
             <Link
-              href="/contact"
+              href="/booking"
               onClick={() => setIsMenuOpen(false)}
               className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white"
             >
@@ -112,8 +118,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </div>
         </div>
       )}
-      <main className="pt-30 md:pt-26">{children}</main>
-      <footer className="mt-20 border-t border-slate-800 bg-slate-950 text-slate-100">
+      <main className="pt-30 md:pt-26">
+        <SiteInteractions>{children}</SiteInteractions>
+      </main>
+      <footer data-page-enter className="mt-20 border-t border-slate-800 bg-slate-950 text-slate-100">
         <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
           <div>
             <p className="text-lg font-semibold">Sparkly Maid NYC</p>
@@ -132,6 +140,19 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <p className="mt-3 text-sm">Mon-Fri: 7AM-6PM</p>
             <p className="text-sm">Sat: 8AM-5PM</p>
             <p className="text-sm">Sun: Closed</p>
+          </div>
+        </div>
+        <div className="border-t border-slate-800">
+          <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-5 text-xs text-slate-400 sm:px-6 md:flex-row md:items-center md:justify-between">
+            <p>Copyright {currentYear} Sparkly Maid NYC. All rights reserved.</p>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link href="/privacy-policy" className="transition hover:text-slate-200">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-of-service" className="transition hover:text-slate-200">
+                Terms of Service
+              </Link>
+            </div>
           </div>
         </div>
       </footer>
