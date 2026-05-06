@@ -33,12 +33,24 @@ const faqItems = [
 export default function FaqPage() {
   return (
     <SiteShell>
-      <section className="mx-auto w-full max-w-4xl px-4 py-14 sm:px-6 sm:py-16">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">FAQ</p>
-        <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-          Common questions from our NYC clients
-        </h1>
-        <Accordion className="mt-10 rounded-2xl border border-slate-200 bg-white p-4 sm:p-6" defaultValue={["item-0"]}>
+      <section className="mx-auto flex min-h-svh w-full max-w-4xl items-center justify-center px-4 sm:px-6">
+        <div className="w-full max-w-3xl p-8 text-center sm:p-10">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">FAQ</p>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">FAQ</h1>
+          <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+            Find quick answers about booking, access, payment, eco-friendly products, and our
+            satisfaction policy.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-4xl px-4 pb-14 sm:px-6 sm:pb-16">
+        <div className="mt-8 rounded-3xl border border-slate-200 bg-slate-900 p-5 text-white sm:p-6">
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-300">Quick answer</p>
+          <p className="mt-2 text-lg font-semibold">Yes, we offer eco-friendly options on request.</p>
+        </div>
+
+        <Accordion className="mt-6 rounded-2xl border border-slate-200 bg-white p-4 sm:p-6" defaultValue={["item-0"]}>
           {faqItems.map((item, index) => (
             <AccordionItem key={item.q} value={`item-${index}`}>
               <AccordionTrigger className="text-lg font-semibold text-slate-900 hover:no-underline">

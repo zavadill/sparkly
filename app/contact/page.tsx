@@ -12,15 +12,18 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <SiteShell>
-      <section className="mx-auto w-full max-w-5xl px-4 py-14 sm:px-6 sm:py-16">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">Contact</p>
-        <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-          Book your cleaning in under a minute
-        </h1>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">
-          Call us directly or send your request with preferred date, service type, and apartment
-          size. We will match you with the best cleaner for your needs.
-        </p>
+      <section className="mx-auto flex min-h-svh w-full max-w-5xl items-center justify-center px-4 sm:px-6">
+        <div className="w-full max-w-3xl p-8 text-center sm:p-10">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">Contact</p>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">Contact</h1>
+          <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+            Reach out in seconds and share your preferred date, service type, and apartment details
+            so we can match the right cleaner.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-5xl px-4 pb-14 sm:px-6 sm:pb-16">
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <article className="rounded-2xl border border-slate-200 bg-white p-6">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Get in touch</h2>
@@ -52,7 +55,17 @@ export default function ContactPage() {
           </article>
         </div>
 
-        <div className="mt-8 rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 md:p-8">
+        <div className="mt-8 grid gap-5 md:grid-cols-[0.9fr_1.1fr]">
+          <aside className="rounded-3xl border border-slate-200 bg-slate-900 p-5 text-white sm:p-6 md:p-8">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-300">Before booking</p>
+            <ul className="mt-4 space-y-3 text-sm text-slate-200">
+              <li>Share apartment size and preferred date.</li>
+              <li>Tell us if you need standard or deep cleaning.</li>
+              <li>Add special instructions for access.</li>
+            </ul>
+          </aside>
+
+          <div className="rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 md:p-8">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900">Contact form</h2>
           <p className="mt-2 text-base leading-relaxed text-slate-600">
             Demo front-end form. Backend handling will be connected in the next step.
@@ -88,6 +101,7 @@ export default function ContactPage() {
               </Button>
             </div>
           </form>
+          </div>
         </div>
       </section>
     </SiteShell>

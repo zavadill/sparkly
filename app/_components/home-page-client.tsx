@@ -49,6 +49,41 @@ const testimonials = [
   },
 ];
 
+function SectionTitle({
+  title,
+  subtitle,
+  ctaLabel,
+  ctaHref,
+}: {
+  title: string;
+  subtitle?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+}) {
+  return (
+    <div className="mb-7 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
+      <div>
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900 underline decoration-emerald-500 decoration-2 underline-offset-6 md:text-4xl">
+          {title}
+        </h2>
+        {subtitle ? <p className="mt-2 text-sm font-medium text-slate-600">{subtitle}</p> : null}
+      </div>
+      {ctaLabel && ctaHref ? (
+        <Link
+          href={ctaHref}
+          className={cn(
+            buttonVariants({ size: "sm" }),
+            "cta-gsap inline-flex items-center gap-1.5 rounded-full bg-emerald-600 px-4 text-white hover:bg-emerald-500",
+          )}
+        >
+          {ctaLabel}
+          <ArrowUpRight className="size-3.5" />
+        </Link>
+      ) : null}
+    </div>
+  );
+}
+
 export function HomePageClient() {
   const rootRef = useRef<HTMLDivElement>(null);
 
@@ -155,12 +190,13 @@ export function HomePageClient() {
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
-        <div className="animate-in mb-8 flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-end">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-4xl">Cleaning services</h2>
-          <Link href="/services" className="group inline-flex items-center gap-2 text-sm font-semibold text-emerald-700">
-            View all services
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+        <div className="animate-in">
+          <SectionTitle
+            title="Cleaning Services"
+            subtitle="Pick the service that fits your space."
+            ctaLabel="All Services"
+            ctaHref="/services"
+          />
         </div>
         <div className="grid gap-4 md:grid-cols-12">
           {serviceCards.map((service) => (
@@ -180,6 +216,12 @@ export function HomePageClient() {
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 sm:pb-16">
+        <SectionTitle
+          title="Deep Cleaning"
+          subtitle="A stronger reset for high-impact areas."
+          ctaLabel="Deep Clean Page"
+          ctaHref="/services"
+        />
         <div className="animate-in grid gap-6 overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-5 sm:p-8 md:grid-cols-[1.05fr_0.95fr] md:items-center">
           <div>
             <p className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-emerald-700 ring-1 ring-slate-200">
@@ -228,6 +270,12 @@ export function HomePageClient() {
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
+        <SectionTitle
+          title="How It Works"
+          subtitle="Simple 3-step process from booking to clean home."
+          ctaLabel="About Process"
+          ctaHref="/about"
+        />
         <div className="animate-in grid gap-4 rounded-[2rem] bg-white p-5 ring-1 ring-slate-200 sm:p-8 md:grid-cols-3">
           {processSteps.map((step, index) => (
             <div key={step} className="rounded-2xl bg-slate-50 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
@@ -246,6 +294,14 @@ export function HomePageClient() {
       </section>
 
       <section className="mx-auto grid w-full max-w-6xl gap-6 px-4 pb-14 sm:px-6 sm:pb-16 md:grid-cols-2 md:items-center md:gap-8">
+        <div className="md:col-span-2">
+          <SectionTitle
+            title="Why Sparkly Maid"
+            subtitle="Consistency, trust, and quality in every visit."
+            ctaLabel="About Us"
+            ctaHref="/about"
+          />
+        </div>
         <Card className="animate-in border-slate-200 bg-white p-0 shadow-sm md:rotate-[-0.4deg]">
           <CardHeader className="px-6 pt-6 pb-2">
             <CardTitle className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
@@ -285,9 +341,13 @@ export function HomePageClient() {
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 sm:pb-16">
-        <div className="animate-in mb-7 flex flex-col items-start justify-between gap-2 sm:flex-row sm:items-end">
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-4xl">Gallery</h2>
-          <p className="text-sm font-medium text-slate-600">Internet photos in 19:6 ratio</p>
+        <div className="animate-in">
+          <SectionTitle
+            title="Gallery"
+            subtitle="Real cleaning atmosphere and results."
+            ctaLabel="Read Blog"
+            ctaHref="/blog"
+          />
         </div>
         <div className="grid gap-5">
           <Card className="animate-in overflow-hidden border-slate-200 bg-white p-0">
@@ -324,7 +384,14 @@ export function HomePageClient() {
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 pb-14 sm:px-6 sm:pb-16">
-        <h2 className="animate-in text-2xl font-bold tracking-tight text-slate-900 md:text-4xl">What clients say</h2>
+        <div className="animate-in">
+          <SectionTitle
+            title="What Clients Say"
+            subtitle="Short reviews from recent NYC customers."
+            ctaLabel="FAQ"
+            ctaHref="/faq"
+          />
+        </div>
         <div className="mt-7 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {testimonials.map((item) => (
             <Card
@@ -348,6 +415,12 @@ export function HomePageClient() {
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20">
+        <SectionTitle
+          title="Quick Inquiry"
+          subtitle="Send your details and we will get back to you fast."
+          ctaLabel="Contact Page"
+          ctaHref="/contact"
+        />
         <div className="animate-in grid gap-6 rounded-[2rem] border border-slate-800 bg-slate-900 p-5 text-white sm:p-8 md:grid-cols-[0.9fr_1.1fr] md:gap-8 md:p-10">
           <div>
             <p className="text-sm uppercase tracking-[0.18em] text-cyan-200">Quick Inquiry</p>

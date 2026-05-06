@@ -23,19 +23,44 @@ const services = [
 export default function ServicesPage() {
   return (
     <SiteShell>
-      <section className="mx-auto w-full max-w-6xl px-4 py-14 sm:px-6 sm:py-16">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">Services</p>
-        <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-          Professional cleaning for every type of space
-        </h1>
-        <p className="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">
-          Choose from recurring home cleaning, one-time deep cleaning, move-related packages, and
-          specialty options for offices and Airbnb hosts.
-        </p>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+      <section className="mx-auto flex min-h-svh w-full max-w-6xl items-center justify-center px-4 sm:px-6">
+        <div className="w-full max-w-3xl p-8 text-center sm:p-10">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">Services</p>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">Services</h1>
+          <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+            Professional cleaning solutions for apartments, houses, offices, and move-related needs
+            across NYC.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-4 pb-8 sm:px-6">
+        <div className="grid gap-4 rounded-3xl border border-slate-200 bg-white p-4 sm:grid-cols-3 sm:p-6">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">Avg. booking</p>
+            <p className="mt-2 text-2xl font-bold text-slate-900">2 mins</p>
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">Guarantee</p>
+            <p className="mt-2 text-2xl font-bold text-slate-900">48 hours</p>
+          </div>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">Coverage</p>
+            <p className="mt-2 text-2xl font-bold text-slate-900">All NYC boroughs</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6">
+        <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {services.map((service) => (
-            <article key={service} className="rounded-2xl border border-slate-200 bg-white p-6">
-              <h2 className="text-xl font-semibold tracking-tight text-slate-900">{service}</h2>
+            <article
+              key={service}
+              className="group rounded-2xl border border-slate-200 bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <h2 className="text-xl font-semibold tracking-tight text-slate-900 group-hover:text-emerald-700">
+                {service}
+              </h2>
               <p className="mt-2 text-base leading-relaxed text-slate-600">
                 Tailored checklist, reliable pros, and high attention to detail.
               </p>
