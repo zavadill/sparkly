@@ -326,7 +326,7 @@ export function HomePageClient() {
         </div>
       </section>
 
-      <section data-reveal className="mx-auto grid w-full max-w-6xl gap-6 px-4 pb-14 sm:px-6 sm:pb-16 md:grid-cols-2 md:items-center md:gap-8">
+      <section data-reveal className="mx-auto grid w-full max-w-6xl gap-6 px-4 pb-14 sm:px-6 sm:pb-16 md:grid-cols-2 md:items-stretch md:gap-8">
         <div className="md:col-span-2">
           <SectionTitle
             title="Why Sparkly Maid"
@@ -335,14 +335,17 @@ export function HomePageClient() {
             ctaHref="/about"
           />
         </div>
-        <Card data-interactive-card className="animate-in border-slate-200 bg-white p-0 shadow-sm dark:border-slate-800 dark:bg-slate-900 md:rotate-[-0.4deg]">
+        <Card
+          data-interactive-card
+          className="animate-in flex h-full min-h-0 flex-col border-slate-200 bg-white p-0 shadow-sm dark:border-slate-800 dark:bg-slate-900 md:rotate-[-0.4deg]"
+        >
           <CardHeader className="px-6 pt-6 pb-2">
             <CardTitle className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-3xl">
               Why clients choose us
             </CardTitle>
           </CardHeader>
-          <CardContent className="px-6 pb-6">
-            <ul className="space-y-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
+          <CardContent className="flex flex-1 flex-col px-6 pb-6">
+            <ul className="flex-1 space-y-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
               <li>Trusted and background-checked cleaners</li>
               <li>Online booking in under one minute</li>
               <li>Flexible scheduling for homes and offices</li>
@@ -350,13 +353,16 @@ export function HomePageClient() {
             </ul>
           </CardContent>
         </Card>
-        <Card data-interactive-card className="animate-in border-slate-200 bg-slate-100 p-0 dark:border-slate-800 dark:bg-slate-800 md:rotate-[0.4deg]">
+        <Card
+          data-interactive-card
+          className="animate-in flex h-full min-h-0 flex-col border-slate-200 bg-slate-100 p-0 dark:border-slate-800 dark:bg-slate-800 md:rotate-[0.4deg]"
+        >
           <CardHeader className="px-6 pt-6 pb-2">
-            <CardTitle className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+            <CardTitle className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-3xl">
               48-hour satisfaction guarantee
             </CardTitle>
           </CardHeader>
-          <CardContent className="px-6 pb-6">
+          <CardContent className="flex flex-1 flex-col px-6 pb-6">
             <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
               Not happy? Tell us within 48 hours and we will re-clean for free.
             </p>
@@ -364,7 +370,7 @@ export function HomePageClient() {
               href="/faq"
               className={cn(
                 buttonVariants(),
-                "cta-gsap mt-6 inline-flex rounded-full bg-emerald-600 px-5 text-white hover:bg-emerald-500",
+                "cta-gsap mt-auto inline-flex rounded-full bg-emerald-600 px-5 text-white hover:bg-emerald-500",
               )}
             >
               Read FAQ
