@@ -63,10 +63,10 @@ function SectionTitle({
   return (
     <div className="mb-7 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-end">
       <div>
-        <h2 className="text-2xl font-bold tracking-tight text-slate-900 underline decoration-emerald-500 decoration-2 underline-offset-6 md:text-4xl">
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900 underline decoration-emerald-500 decoration-2 underline-offset-6 dark:text-slate-100 md:text-4xl">
           {title}
         </h2>
-        {subtitle ? <p className="mt-2 text-sm font-medium text-slate-600">{subtitle}</p> : null}
+        {subtitle ? <p className="mt-2 text-sm font-medium text-slate-600 dark:text-slate-400">{subtitle}</p> : null}
       </div>
       {ctaLabel && ctaHref ? (
         <Link
@@ -202,12 +202,12 @@ export function HomePageClient() {
           {serviceCards.map((service) => (
             <Card
               key={service}
-              className="animate-in border-slate-200/80 bg-white/95 p-0 md:col-span-4 md:even:-translate-y-1 md:odd:translate-y-1"
+              className="animate-in border-slate-200/80 bg-white/95 p-0 dark:border-slate-800 dark:bg-slate-900 md:col-span-4 md:even:-translate-y-1 md:odd:translate-y-1"
             >
               <CardHeader className="px-5 pt-5 pb-2">
-                <CardTitle className="text-xl font-semibold text-slate-900">{service}</CardTitle>
+                <CardTitle className="text-xl font-semibold text-slate-900 dark:text-slate-100">{service}</CardTitle>
               </CardHeader>
-              <CardContent className="px-5 pb-5 text-sm leading-relaxed text-slate-600">
+              <CardContent className="px-5 pb-5 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
                 Tailored to your home and schedule.
               </CardContent>
             </Card>
@@ -222,22 +222,22 @@ export function HomePageClient() {
           ctaLabel="Deep Clean Page"
           ctaHref="/services"
         />
-        <div className="animate-in grid gap-6 overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-5 sm:p-8 md:grid-cols-[1.05fr_0.95fr] md:items-center">
+        <div className="animate-in grid gap-6 overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900 sm:p-8 md:grid-cols-[1.05fr_0.95fr] md:items-center">
           <div>
             <p className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-bold uppercase tracking-[0.16em] text-emerald-700 ring-1 ring-slate-200">
               <Sparkles className="size-3.5" />
               Deep Clean Special
             </p>
-            <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-900 md:text-4xl">
+            <h2 className="mt-4 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-4xl">
               The reset your home actually feels
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 dark:text-slate-400">
               Perfect before guests, after renovations, or when your space needs a full refresh.
               We focus on the details most standard cleanings miss.
             </p>
             <ul className="mt-5 space-y-2.5">
               {deepCleanHighlights.map((item) => (
-                <li key={item} className="flex items-start gap-2 text-sm leading-relaxed text-slate-700 sm:text-base">
+                <li key={item} className="flex items-start gap-2 text-sm leading-relaxed text-slate-700 dark:text-slate-300 sm:text-base">
                   <span className="mt-2 size-1.5 rounded-full bg-cyan-600" />
                   <span>{item}</span>
                 </li>
@@ -276,9 +276,9 @@ export function HomePageClient() {
           ctaLabel="About Process"
           ctaHref="/about"
         />
-        <div className="animate-in grid gap-4 rounded-[2rem] bg-white p-5 ring-1 ring-slate-200 sm:p-8 md:grid-cols-3">
+        <div className="animate-in grid gap-4 rounded-[2rem] bg-white p-5 ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-800 sm:p-8 md:grid-cols-3">
           {processSteps.map((step, index) => (
-            <div key={step} className="rounded-2xl bg-slate-50 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
+            <div key={step} className="rounded-2xl bg-slate-50 p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)] dark:bg-slate-800/70 dark:shadow-none">
               <div className="flex items-center justify-between">
                 <p className="text-xs font-bold tracking-[0.16em] text-emerald-700">STEP {index + 1}</p>
                 {index < processSteps.length - 1 ? (
@@ -287,7 +287,7 @@ export function HomePageClient() {
                   <ArrowUpRight className="size-4 text-cyan-600/80" />
                 )}
               </div>
-              <p className="mt-3 text-lg font-semibold text-slate-900">{step}</p>
+              <p className="mt-3 text-lg font-semibold text-slate-900 dark:text-slate-100">{step}</p>
             </div>
           ))}
         </div>
@@ -302,14 +302,14 @@ export function HomePageClient() {
             ctaHref="/about"
           />
         </div>
-        <Card className="animate-in border-slate-200 bg-white p-0 shadow-sm md:rotate-[-0.4deg]">
+        <Card className="animate-in border-slate-200 bg-white p-0 shadow-sm dark:border-slate-800 dark:bg-slate-900 md:rotate-[-0.4deg]">
           <CardHeader className="px-6 pt-6 pb-2">
-            <CardTitle className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl">
+            <CardTitle className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-3xl">
               Why clients choose us
             </CardTitle>
           </CardHeader>
           <CardContent className="px-6 pb-6">
-            <ul className="space-y-3 text-base leading-relaxed text-slate-600">
+            <ul className="space-y-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
               <li>Trusted and background-checked cleaners</li>
               <li>Online booking in under one minute</li>
               <li>Flexible scheduling for homes and offices</li>
@@ -317,14 +317,14 @@ export function HomePageClient() {
             </ul>
           </CardContent>
         </Card>
-        <Card className="animate-in border-slate-200 bg-slate-100 p-0 md:rotate-[0.4deg]">
+        <Card className="animate-in border-slate-200 bg-slate-100 p-0 dark:border-slate-800 dark:bg-slate-800 md:rotate-[0.4deg]">
           <CardHeader className="px-6 pt-6 pb-2">
-            <CardTitle className="text-xl font-bold tracking-tight text-slate-900">
+            <CardTitle className="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
               48-hour satisfaction guarantee
             </CardTitle>
           </CardHeader>
           <CardContent className="px-6 pb-6">
-            <p className="text-base leading-relaxed text-slate-600">
+            <p className="text-base leading-relaxed text-slate-600 dark:text-slate-300">
               Not happy? Tell us within 48 hours and we will re-clean for free.
             </p>
             <Link
@@ -350,7 +350,7 @@ export function HomePageClient() {
           />
         </div>
         <div className="grid gap-5">
-          <Card className="animate-in overflow-hidden border-slate-200 bg-white p-0">
+          <Card className="animate-in overflow-hidden border-slate-200 bg-white p-0 dark:border-slate-800 dark:bg-slate-900">
             <Image
               src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1900&h=600&q=80"
               alt="Professional cleaner working in modern apartment"
@@ -358,9 +358,9 @@ export function HomePageClient() {
               height={600}
               className="aspect-19/6 w-full object-cover"
             />
-            <CardContent className="px-5 py-4 text-sm text-slate-600">Apartment deep cleaning</CardContent>
+            <CardContent className="px-5 py-4 text-sm text-slate-600 dark:text-slate-400">Apartment deep cleaning</CardContent>
           </Card>
-          <Card className="animate-in overflow-hidden border-slate-200 bg-white p-0">
+          <Card className="animate-in overflow-hidden border-slate-200 bg-white p-0 dark:border-slate-800 dark:bg-slate-900">
             <Image
               src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1900&h=600&q=80"
               alt="Cleaning tools arranged for home cleaning service"
@@ -368,9 +368,9 @@ export function HomePageClient() {
               height={600}
               className="aspect-19/6 w-full object-cover"
             />
-            <CardContent className="px-5 py-4 text-sm text-slate-600">Tools and detail work</CardContent>
+            <CardContent className="px-5 py-4 text-sm text-slate-600 dark:text-slate-400">Tools and detail work</CardContent>
           </Card>
-          <Card className="animate-in overflow-hidden border-slate-200 bg-white p-0">
+          <Card className="animate-in overflow-hidden border-slate-200 bg-white p-0 dark:border-slate-800 dark:bg-slate-900">
             <Image
               src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&w=1900&h=600&q=80"
               alt="Minimal living room after professional cleaning"
@@ -378,7 +378,7 @@ export function HomePageClient() {
               height={600}
               className="aspect-19/6 w-full object-cover"
             />
-            <CardContent className="px-5 py-4 text-sm text-slate-600">Fresh and minimal results</CardContent>
+            <CardContent className="px-5 py-4 text-sm text-slate-600 dark:text-slate-400">Fresh and minimal results</CardContent>
           </Card>
         </div>
       </section>
@@ -396,7 +396,7 @@ export function HomePageClient() {
           {testimonials.map((item) => (
             <Card
               key={item.author}
-              className="animate-in border-slate-200 bg-white p-0 shadow-sm md:odd:rotate-[-0.6deg] md:even:rotate-[0.6deg]"
+              className="animate-in border-slate-200 bg-white p-0 shadow-sm dark:border-slate-800 dark:bg-slate-900 md:odd:rotate-[-0.6deg] md:even:rotate-[0.6deg]"
             >
               <CardContent className="px-5 py-5">
                 <div className="mb-3 flex items-center gap-1 text-amber-500">
@@ -406,7 +406,7 @@ export function HomePageClient() {
                   <Star className="size-4 fill-current" />
                   <Star className="size-4 fill-current" />
                 </div>
-                <p className="text-base leading-relaxed font-medium text-slate-800">&quot;{item.quote}&quot;</p>
+                <p className="text-base leading-relaxed font-medium text-slate-800 dark:text-slate-200">&quot;{item.quote}&quot;</p>
                 <p className="mt-4 text-sm font-bold tracking-wide text-emerald-700">{item.author}</p>
               </CardContent>
             </Card>
@@ -425,7 +425,7 @@ export function HomePageClient() {
           <div>
             <p className="text-sm uppercase tracking-[0.18em] text-cyan-200">Quick Inquiry</p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight md:text-4xl">Tell us about your space</h2>
-            <p className="mt-4 max-w-xl text-base leading-relaxed text-cyan-100/90">
+            <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-300">
               Frontend demo form. Backend comes next.
             </p>
           </div>

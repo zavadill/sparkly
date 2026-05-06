@@ -10,9 +10,9 @@ export default function AboutPage() {
     <SiteShell>
       <section className="mx-auto flex min-h-svh w-full max-w-5xl items-center justify-center px-4 sm:px-6">
         <div className="w-full max-w-3xl p-8 text-center sm:p-10">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">About</p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">About Us</h1>
-          <p className="mt-6 text-base leading-relaxed text-slate-600 md:text-lg">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-400">About</p>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-6xl">About Us</h1>
+          <p className="mt-6 text-base leading-relaxed text-slate-600 dark:text-slate-400 md:text-lg">
             Learn how Sparkly Maid NYC combines trusted cleaners, quality standards, and friendly
             support to deliver reliable service in every home.
           </p>
@@ -41,16 +41,16 @@ export default function AboutPage() {
 
       <section className="mx-auto w-full max-w-5xl px-4 pb-16 sm:px-6">
         <div className="grid gap-5 md:grid-cols-2 md:gap-6">
-          <article className="rounded-2xl border border-slate-200 bg-white p-6">
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Our mission</h2>
-            <p className="mt-3 text-base leading-relaxed text-slate-600">
+          <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Our mission</h2>
+            <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
               Build a trustworthy team that cares for every home while creating real growth
               opportunities and a supportive workplace for cleaners.
             </p>
           </article>
-          <article className="rounded-2xl border border-slate-200 bg-white p-6">
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Our commitment</h2>
-            <p className="mt-3 text-base leading-relaxed text-slate-600">
+          <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Our commitment</h2>
+            <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
               Deliver punctual, detail-focused service with eco-friendly options, clear
               communication, and a 48-hour re-clean guarantee.
             </p>

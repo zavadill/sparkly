@@ -14,9 +14,9 @@ export default function ContactPage() {
     <SiteShell>
       <section className="mx-auto flex min-h-svh w-full max-w-5xl items-center justify-center px-4 sm:px-6">
         <div className="w-full max-w-3xl p-8 text-center sm:p-10">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700">Contact</p>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-6xl">Contact</h1>
-          <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-lg">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-400">Contact</p>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-6xl">Contact</h1>
+          <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400 md:text-lg">
             Reach out in seconds and share your preferred date, service type, and apartment details
             so we can match the right cleaner.
           </p>
@@ -25,21 +25,21 @@ export default function ContactPage() {
 
       <section className="mx-auto w-full max-w-5xl px-4 pb-14 sm:px-6 sm:pb-16">
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <article className="rounded-2xl border border-slate-200 bg-white p-6">
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Get in touch</h2>
-            <p className="mt-3 text-base leading-relaxed text-slate-600">(646) 585-3515</p>
-            <p className="text-base leading-relaxed text-slate-600">sparklymaidnychousecleaning@gmail.com</p>
-            <p className="mt-3 text-base leading-relaxed text-slate-600">
+          <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Get in touch</h2>
+            <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">(646) 585-3515</p>
+            <p className="text-base leading-relaxed text-slate-600 dark:text-slate-400">sparklymaidnychousecleaning@gmail.com</p>
+            <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
               447 Broadway 2nd floor
               <br />
               Suite 523, New York, NY 10013
             </p>
           </article>
-          <article className="rounded-2xl border border-slate-200 bg-white p-6">
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Business hours</h2>
-            <p className="mt-3 text-base leading-relaxed text-slate-600">Monday-Friday: 7AM-6PM</p>
-            <p className="text-base leading-relaxed text-slate-600">Saturday: 8AM-5PM</p>
-            <p className="text-base leading-relaxed text-slate-600">Sunday: Closed</p>
+          <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Business hours</h2>
+            <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">Monday-Friday: 7AM-6PM</p>
+            <p className="text-base leading-relaxed text-slate-600 dark:text-slate-400">Saturday: 8AM-5PM</p>
+            <p className="text-base leading-relaxed text-slate-600 dark:text-slate-400">Sunday: Closed</p>
             <a
               href="tel:+16465853515"
               className="mt-5 inline-flex rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white"
@@ -47,16 +47,16 @@ export default function ContactPage() {
               Call Now
             </a>
           </article>
-          <article className="rounded-2xl border border-slate-200 bg-white p-6">
-            <h2 className="text-2xl font-semibold tracking-tight text-slate-900">Satisfaction policy</h2>
-            <p className="mt-3 text-base leading-relaxed text-slate-600">
+          <article className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+            <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Satisfaction policy</h2>
+            <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
               Not satisfied? Let us know within 48 hours and we will re-clean the area for free.
             </p>
           </article>
         </div>
 
         <div className="mt-8 grid gap-5 md:grid-cols-[0.9fr_1.1fr]">
-          <aside className="rounded-3xl border border-slate-200 bg-slate-900 p-5 text-white sm:p-6 md:p-8">
+          <aside className="rounded-3xl border border-slate-200 bg-slate-900 p-5 text-white dark:border-slate-700 sm:p-6 md:p-8">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-300">Before booking</p>
             <ul className="mt-4 space-y-3 text-sm text-slate-200">
               <li>Share apartment size and preferred date.</li>
@@ -65,9 +65,9 @@ export default function ContactPage() {
             </ul>
           </aside>
 
-          <div className="rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 md:p-8">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900">Contact form</h2>
-          <p className="mt-2 text-base leading-relaxed text-slate-600">
+          <div className="rounded-3xl border border-slate-200 bg-white p-5 dark:border-slate-800 dark:bg-slate-900 sm:p-6 md:p-8">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Contact form</h2>
+          <p className="mt-2 text-base leading-relaxed text-slate-600 dark:text-slate-400">
             Demo front-end form. Backend handling will be connected in the next step.
           </p>
           <form className="mt-6 grid gap-4 sm:grid-cols-2" action="#">
