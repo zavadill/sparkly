@@ -38,7 +38,7 @@ export default function FaqPage() {
         <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
           Common questions from our NYC clients
         </h1>
-        <Accordion className="mt-10 rounded-2xl border border-slate-200 bg-white p-4 sm:p-6" defaultValue="item-0">
+        <Accordion className="mt-10 rounded-2xl border border-slate-200 bg-white p-4 sm:p-6" defaultValue={["item-0"]}>
           {faqItems.map((item, index) => (
             <AccordionItem key={item.q} value={`item-${index}`}>
               <AccordionTrigger className="text-lg font-semibold text-slate-900 hover:no-underline">

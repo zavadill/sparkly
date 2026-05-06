@@ -6,10 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLayoutEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/lib/utils";
 
 const serviceCards = [
   "Apartment Cleaning",
@@ -118,24 +120,27 @@ export function HomePageClient() {
               Trusted cleaners. Flexible booking. Spotless results.
             </p>
             <div className="mt-8 flex flex-wrap gap-2.5 sm:gap-3">
-              <Button
-                asChild
-                size="lg"
-                className="cta-gsap group rounded-full bg-emerald-400 px-5 text-slate-950 hover:bg-emerald-300 sm:px-6"
+              <Link
+                href="/contact"
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "cta-gsap group rounded-full bg-emerald-400 px-5 text-slate-950 hover:bg-emerald-300 sm:px-6",
+                )}
               >
-                <Link href="/contact" className="inline-flex items-center gap-2">
+                <span className="inline-flex items-center gap-2">
                   Book a Cleaning
                   <ArrowUpRight className="size-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                </Link>
-              </Button>
-              <Button
-                asChild
-                size="lg"
-                variant="outline"
-                className="cta-gsap rounded-full border-white/25 bg-white/5 px-5 text-white hover:bg-white/10 hover:text-white sm:px-6"
+                </span>
+              </Link>
+              <a
+                href="tel:+16465853515"
+                className={cn(
+                  buttonVariants({ size: "lg", variant: "outline" }),
+                  "cta-gsap rounded-full border-white/25 bg-white/5 px-5 text-white hover:bg-white/10 hover:text-white sm:px-6",
+                )}
               >
-                <a href="tel:+16465853515">(646) 585-3515</a>
-              </Button>
+                (646) 585-3515
+              </a>
             </div>
           </div>
           <Image
@@ -196,15 +201,16 @@ export function HomePageClient() {
                 </li>
               ))}
             </ul>
-            <Button
-              asChild
-              className="cta-gsap mt-6 rounded-full bg-emerald-600 px-6 text-white hover:bg-emerald-500"
+            <Link
+              href="/contact"
+              className={cn(
+                buttonVariants(),
+                "cta-gsap mt-6 inline-flex items-center gap-2 rounded-full bg-emerald-600 px-6 text-white hover:bg-emerald-500",
+              )}
             >
-              <Link href="/contact" className="inline-flex items-center gap-2">
-                Book Deep Cleaning
-                <ArrowUpRight className="size-4" />
-              </Link>
-            </Button>
+              Book Deep Cleaning
+              <ArrowUpRight className="size-4" />
+            </Link>
           </div>
           <div className="relative">
             <Image
@@ -265,9 +271,15 @@ export function HomePageClient() {
             <p className="text-base leading-relaxed text-slate-600">
               Not happy? Tell us within 48 hours and we will re-clean for free.
             </p>
-            <Button asChild className="cta-gsap mt-6 rounded-full bg-emerald-600 px-5 text-white hover:bg-emerald-500">
-              <Link href="/faq">Read FAQ</Link>
-            </Button>
+            <Link
+              href="/faq"
+              className={cn(
+                buttonVariants(),
+                "cta-gsap mt-6 inline-flex rounded-full bg-emerald-600 px-5 text-white hover:bg-emerald-500",
+              )}
+            >
+              Read FAQ
+            </Link>
           </CardContent>
         </Card>
       </section>
