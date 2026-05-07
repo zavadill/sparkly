@@ -11,7 +11,7 @@ const posts = [
     excerpt: "A quick room-by-room checklist to maximize your cleaner's time.",
   },
   {
-    title: "Eco-Friendly Cleaning Habits for NYC Homes",
+    title: "Eco-Friendly Cleaning Habits for Modern Homes",
     excerpt: "Simple low-waste habits to keep your space fresh between appointments.",
   },
   {
@@ -29,7 +29,7 @@ export default function BlogPage() {
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-6xl">Blog</h1>
           <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400 md:text-lg">
             Practical cleaning tips, apartment care checklists, and simple routines to keep your
-            NYC space fresh between visits.
+            space fresh between visits.
           </p>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function BlogPage() {
           <article data-stagger-item data-interactive-card className="rounded-3xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900 md:col-span-7">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">Featured</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
-              NYC Cleaning Calendar: Weekly, Biweekly, or Monthly?
+              Cleaning Calendar: Weekly, Biweekly, or Monthly?
             </h2>
             <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
               A practical guide to choosing the right cleaning rhythm based on lifestyle, family

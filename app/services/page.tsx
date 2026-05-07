@@ -6,18 +6,18 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  "Apartment Cleaning Services NYC",
-  "House Cleaning Services NYC",
-  "Deep Cleaning Services NYC",
-  "Move In Cleaning Services NYC",
-  "Move Out Cleaning Services NYC",
-  "Post Construction Cleaning Services NYC",
-  "Airbnb Cleaning Services NYC",
-  "Same Day Cleaning Services NYC",
-  "Office Cleaning Services NYC",
-  "Extreme Deep Cleaning Services NYC",
-  "Maid Service NYC",
-  "Green Cleaning Services NYC",
+  "Apartment Cleaning Services",
+  "House Cleaning Services",
+  "Deep Cleaning Services",
+  "Move In Cleaning Services",
+  "Move Out Cleaning Services",
+  "Post Construction Cleaning Services",
+  "Airbnb Cleaning Services",
+  "Same Day Cleaning Services",
+  "Office Cleaning Services",
+  "Extreme Deep Cleaning Services",
+  "Maid Service",
+  "Green Cleaning Services",
 ];
 
 export default function ServicesPage() {

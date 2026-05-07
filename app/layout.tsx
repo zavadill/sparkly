@@ -14,11 +14,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Sparkly Maid NYC",
-    template: "%s | Sparkly Maid NYC",
+    default: "Cleaning Company Website",
+    template: "%s | Cleaning Company Website",
   },
   description:
-    "Modern and minimalist multi-page website for Sparkly Maid NYC cleaning services.",
+    "Modern and minimalist multi-page website template for cleaning services.",
 };
 
 export default function RootLayout({

@@ -4,7 +4,7 @@ import { SiteShell } from "../_components/site-shell";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy Policy for Sparkly Maid NYC.",
+  description: "Privacy Policy for your cleaning company website.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
 
         <div className="mt-8 space-y-6 text-base leading-relaxed text-slate-700 dark:text-slate-300">
           <p>
-            Sparkly Maid NYC (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) collects and uses personal information only as needed
+            This website (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) collects and uses personal information only as needed
             to provide cleaning services, communicate with customers, and operate our website.
           </p>
 
@@ -55,8 +55,8 @@ export default function PrivacyPolicyPage() {
             <p className="mt-3">
               Depending on where you live, you may have rights to access, correct, or delete personal
               information, and to object to or limit certain processing. To submit a request, contact us at{" "}
-              <a className="text-emerald-700 underline underline-offset-4 dark:text-emerald-400" href="mailto:sparklymaidnychousecleaning@gmail.com">
-                sparklymaidnychousecleaning@gmail.com
+              <a className="text-emerald-700 underline underline-offset-4 dark:text-emerald-400" href="mailto:hello@yourcleaningcompany.com">
+                hello@yourcleaningcompany.com
               </a>
               .
             </p>

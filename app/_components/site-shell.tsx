@@ -38,12 +38,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         className="fixed inset-x-0 top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/90"
       >
         <div className="mx-auto hidden w-full max-w-6xl items-center justify-between px-4 py-2 text-xs text-slate-600 dark:text-slate-400 sm:flex sm:px-6">
-          <p>NYC trusted house cleaning</p>
-          <p>Call us: (646) 585-3515</p>
+          <p>Trusted house cleaning services</p>
+          <p>Call us: (000) 000-0000</p>
         </div>
         <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
           <Link href="/" className="text-base font-semibold tracking-tight text-slate-900 dark:text-slate-100 sm:text-lg">
-            Sparkly Maid <span className="text-emerald-700">NYC</span>
+            Cleaning <span className="text-emerald-700">Company</span>
           </Link>
           <nav className="hidden items-center gap-2 rounded-full border border-slate-200 bg-white p-1 text-sm text-slate-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 md:flex">
             {navItems.map((item) => (
@@ -77,7 +77,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         <div className="fixed inset-0 z-60 flex min-h-svh flex-col bg-slate-950 p-6 text-white md:hidden">
           <div className="flex items-center justify-between">
             <p className="text-base font-semibold">
-              Sparkly Maid <span className="text-emerald-300">NYC</span>
+              Cleaning <span className="text-emerald-300">Company</span>
             </p>
             <button
               type="button"
@@ -102,10 +102,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </nav>
           <div className="space-y-3">
             <a
-              href="tel:+16465853515"
+              href="tel:+10000000000"
               className="block w-full rounded-full border border-white/30 px-5 py-3 text-center text-sm font-semibold"
             >
-              Call (646) 585-3515
+              Call (000) 000-0000
             </a>
             <Link
               href="/booking"
@@ -124,16 +124,16 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <footer data-page-enter className="mt-20 border-t border-slate-800 bg-slate-950 text-slate-100">
         <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
           <div>
-            <p className="text-lg font-semibold">Sparkly Maid NYC</p>
+            <p className="text-lg font-semibold">Cleaning Company</p>
             <p className="mt-3 text-sm text-slate-300">
-              Trusted maid service for homes and apartments across New York City.
+              Trusted maid service for homes and apartments in your area.
             </p>
           </div>
           <div className="border-t border-slate-800 pt-4 md:border-0 md:pt-0">
             <p className="text-sm font-semibold uppercase tracking-wide text-slate-400">Contact</p>
-            <p className="mt-3 text-sm">(646) 585-3515</p>
-            <p className="text-sm">sparklymaidnychousecleaning@gmail.com</p>
-            <p className="text-sm">447 Broadway 2nd floor, Suite 523, New York, NY 10013</p>
+            <p className="mt-3 text-sm">(000) 000-0000</p>
+            <p className="text-sm">hello@yourcleaningcompany.com</p>
+            <p className="text-sm">123 Main Street, Suite 100, Your City, ST 00000</p>
           </div>
           <div className="border-t border-slate-800 pt-4 md:border-0 md:pt-0">
             <p className="text-sm font-semibold uppercase tracking-wide text-slate-400">Hours</p>
@@ -144,7 +144,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         </div>
         <div className="border-t border-slate-800">
           <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-5 text-xs text-slate-400 sm:px-6 md:flex-row md:items-center md:justify-between">
-            <p>Copyright {currentYear} Sparkly Maid NYC. All rights reserved.</p>
+            <p>Copyright {currentYear} Cleaning Company. All rights reserved.</p>
             <div className="flex flex-wrap items-center gap-4">
               <Link href="/privacy-policy" className="transition hover:text-slate-200">
                 Privacy Policy

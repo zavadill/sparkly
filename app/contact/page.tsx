@@ -28,14 +28,14 @@ export default function ContactPage() {
         <div data-stagger className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <article data-stagger-item data-interactive-card className="min-w-0 rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
             <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">Get in touch</h2>
-            <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">(646) 585-3515</p>
+            <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">(000) 000-0000</p>
             <p className="break-all text-base leading-relaxed text-slate-600 dark:text-slate-400">
-              sparklymaidnychousecleaning@gmail.com
+              hello@yourcleaningcompany.com
             </p>
             <p className="mt-3 text-base leading-relaxed text-slate-600 dark:text-slate-400">
-              447 Broadway 2nd floor
+              123 Main Street
               <br />
-              Suite 523, New York, NY 10013
+              Suite 100, Your City, ST 00000
             </p>
           </article>
           <article data-stagger-item data-interactive-card className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
@@ -44,7 +44,7 @@ export default function ContactPage() {
             <p className="text-base leading-relaxed text-slate-600 dark:text-slate-400">Saturday: 8AM-5PM</p>
             <p className="text-base leading-relaxed text-slate-600 dark:text-slate-400">Sunday: Closed</p>
             <a
-              href="tel:+16465853515"
+              href="tel:+10000000000"
               className="mt-5 inline-flex rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-medium text-white"
             >
               Call Now
@@ -84,7 +84,7 @@ export default function ContactPage() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="phone">Phone</Label>
-                <Input id="phone" name="phone" placeholder="(646) 585-3515" />
+                <Input id="phone" name="phone" placeholder="(000) 000-0000" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="service">Requested service</Label>

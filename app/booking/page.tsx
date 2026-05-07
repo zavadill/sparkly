@@ -52,7 +52,7 @@ export default function BookingPage() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="bookingPhone">Phone</Label>
-                <Input id="bookingPhone" name="bookingPhone" placeholder="(646) 585-3515" />
+                <Input id="bookingPhone" name="bookingPhone" placeholder="(000) 000-0000" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="bookingService">Requested service</Label>

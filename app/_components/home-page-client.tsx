@@ -61,15 +61,15 @@ const deepCleanHighlights = [
 const testimonials = [
   {
     quote: "Fast, professional, and always reliable.",
-    author: "Sarah Thomas, Manhattan",
+    author: "Sarah Thomas",
   },
   {
     quote: "Booking is simple and the results are consistent.",
-    author: "Jessica Miller, Queens",
+    author: "Jessica Miller",
   },
   {
-    quote: "Best cleaning team we have worked with in NYC.",
-    author: "Mark Lewis, Brooklyn",
+    quote: "Best cleaning team we have worked with.",
+    author: "Mark Lewis",
   },
 ];
 
@@ -170,10 +170,10 @@ export function HomePageClient() {
         <div className="mx-auto grid min-h-[calc(100svh-7.5rem)] w-full max-w-6xl gap-8 px-4 py-8 sm:px-6 md:min-h-[calc(100svh-6rem)] md:grid-cols-[1.05fr_0.95fr] md:items-center md:gap-10 md:py-12">
           <div className="animate-in">
             <p className="inline-flex -rotate-1 rounded-sm bg-emerald-300 px-3 py-1 text-xs font-semibold text-slate-900">
-              Rated #1 Maid Service NYC
+              Top Rated Local Maid Service
             </p>
             <h1 className="mt-5 text-3xl font-bold leading-[1.05] tracking-tight sm:text-4xl md:text-6xl">
-              Modern cleaning service for busy NYC homes
+              Modern cleaning service for busy homes
             </h1>
             <p className="mt-5 max-w-xl text-base leading-relaxed text-emerald-100/90 md:text-lg">
               Trusted cleaners. Flexible booking. Spotless results.
@@ -192,13 +192,13 @@ export function HomePageClient() {
                 </span>
               </Link>
               <a
-                href="tel:+16465853515"
+                href="tel:+10000000000"
                 className={cn(
                   buttonVariants({ size: "lg", variant: "outline" }),
                   "cta-gsap rounded-full border-white/25 bg-white/5 px-5 text-white hover:bg-white/10 hover:text-white sm:px-6",
                 )}
               >
-                (646) 585-3515
+                (000) 000-0000
               </a>
             </div>
           </div>
@@ -296,7 +296,7 @@ export function HomePageClient() {
               className="aspect-video rounded-2xl object-cover shadow-xl"
             />
             <div className="absolute -bottom-3 -left-3 rounded-xl bg-slate-950 px-3 py-2 text-xs font-semibold text-white sm:-bottom-4 sm:-left-4 sm:text-sm">
-              Most requested add-on in NYC
+              Most requested add-on
             </div>
           </div>
         </div>
@@ -329,7 +329,7 @@ export function HomePageClient() {
       <section data-reveal className="mx-auto grid w-full max-w-6xl gap-6 px-4 pb-14 sm:px-6 sm:pb-16 md:grid-cols-2 md:items-stretch md:gap-8">
         <div className="md:col-span-2">
           <SectionTitle
-            title="Why Sparkly Maid"
+            title="Why Choose Us"
             subtitle="Consistency, trust, and quality in every visit."
             ctaLabel="About Us"
             ctaHref="/about"
@@ -426,7 +426,7 @@ export function HomePageClient() {
         <div className="animate-in">
           <SectionTitle
             title="What Clients Say"
-            subtitle="Short reviews from recent NYC customers."
+            subtitle="Short reviews from recent customers."
             ctaLabel="FAQ"
             ctaHref="/faq"
           />

@@ -38,7 +38,7 @@ export function ServicesPageClient({ services }: ServicesPageClientProps) {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-400">Services</p>
             <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-6xl">Services</h1>
             <p className="mt-4 text-base leading-relaxed text-slate-600 dark:text-slate-400 md:text-lg">
-              Professional cleaning solutions for apartments, houses, offices, and move-related needs across NYC.
+              Professional cleaning solutions for apartments, houses, offices, and move-related needs in your area.
             </p>
           </div>
         </section>
@@ -55,7 +55,7 @@ export function ServicesPageClient({ services }: ServicesPageClientProps) {
             </div>
             <div className="services-kpi-item" data-stagger-item>
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">Coverage</p>
-              <p className="mt-2 text-2xl font-bold text-slate-900 dark:text-slate-100">All NYC boroughs</p>
+              <p className="mt-2 text-2xl font-bold text-slate-900 dark:text-slate-100">Citywide coverage</p>
             </div>
           </div>
         </section>

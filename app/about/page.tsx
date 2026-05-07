@@ -13,7 +13,7 @@ export default function AboutPage() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-400">About</p>
           <h1 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 md:text-6xl">About Us</h1>
           <p className="mt-6 text-base leading-relaxed text-slate-600 dark:text-slate-400 md:text-lg">
-            Learn how Sparkly Maid NYC combines trusted cleaners, quality standards, and friendly
+            Learn how a modern cleaning team combines trusted cleaners, quality standards, and friendly
             support to deliver reliable service in every home.
           </p>
         </div>

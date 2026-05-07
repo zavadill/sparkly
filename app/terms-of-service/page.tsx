@@ -4,7 +4,7 @@ import { SiteShell } from "../_components/site-shell";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms of Service for Sparkly Maid NYC.",
+  description: "Terms of Service for your cleaning company website.",
 };
 
 export default function TermsOfServicePage() {
@@ -19,7 +19,7 @@ export default function TermsOfServicePage() {
 
         <div className="mt-8 space-y-6 text-base leading-relaxed text-slate-700 dark:text-slate-300">
           <p>
-            These Terms of Service govern the use of Sparkly Maid NYC website and service requests. By using
+            These Terms of Service govern the use of this cleaning website and service requests. By using
             this website, you agree to these terms.
           </p>
 
@@ -57,7 +57,7 @@ export default function TermsOfServicePage() {
           <div>
             <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">Liability</h2>
             <p className="mt-3">
-              To the extent permitted by law, Sparkly Maid NYC is not liable for indirect or consequential
+              To the extent permitted by law, this company is not liable for indirect or consequential
               damages arising from website use.
             </p>
           </div>
